@@ -20,11 +20,13 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="abstract_state.hpp" />
+    <ClInclude Include="game.hpp" />
     <ClInclude Include="input.hpp" />
     <ClInclude Include="splash_state.hpp" />
     <ClInclude Include="state_machine.hpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="game.cpp" />
     <ClCompile Include="input.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="splash_state.cpp" />

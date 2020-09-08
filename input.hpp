@@ -30,6 +30,8 @@ public:
 
 	~InputHandler();
 
+	void init();
+
 	void getInput(const ALLEGRO_EVENT &ev);
 
 	char getChar() const;

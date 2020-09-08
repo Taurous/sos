@@ -1,7 +1,6 @@
 #include <iostream>
 
 #include "splash_state.hpp"
-#include "play_state.hpp"
 
 #include "input.hpp"
 #include "state_machine.hpp"

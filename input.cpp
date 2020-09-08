@@ -9,6 +9,17 @@ void setBit(char bytefield, char bit, bool flag)
 
 InputHandler::InputHandler() : m_mod_flags(MOD::NONE), m_char_pressed(NULL)
 {
+	
+}
+
+InputHandler::~InputHandler()
+{
+	al_uninstall_keyboard();
+	al_uninstall_mouse();
+}
+
+void InputHandler::init()
+{
 	if (!al_is_system_installed())
 	{
 		std::cerr << "input - Allegro has not been installed!" << std::endl;
@@ -23,12 +34,6 @@ InputHandler::InputHandler() : m_mod_flags(MOD::NONE), m_char_pressed(NULL)
 
 	al_get_keyboard_state(&m_prev_key_state);
 	m_cur_key_state = m_prev_key_state;
-}
-
-InputHandler::~InputHandler()
-{
-	al_uninstall_keyboard();
-	al_uninstall_mouse();
 }
 
 void InputHandler::getInput(const ALLEGRO_EVENT &ev)
